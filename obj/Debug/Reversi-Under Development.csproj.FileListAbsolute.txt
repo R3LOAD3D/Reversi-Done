@@ -7,3 +7,6 @@ C:\Users\Amin\Desktop\Reversi-Done-master\Reversi-Done-master\obj\Debug\WindowsF
 C:\Users\Amin\Desktop\Reversi-Done-master\Reversi-Done-master\obj\Debug\Reversi-Under Development.csproj.GenerateResource.Cache
 C:\Users\Amin\Desktop\Reversi-Done-master\Reversi-Done-master\obj\Debug\WindowsFormsApplication4.exe
 C:\Users\Amin\Desktop\Reversi-Done-master\Reversi-Done-master\obj\Debug\WindowsFormsApplication4.pdb
+C:\Users\Amin\Documents\GitHub\Reversi-Done\bin\Debug\WindowsFormsApplication4.exe.config
+C:\Users\Amin\Documents\GitHub\Reversi-Done\obj\Debug\WindowsFormsApplication4.exe
+C:\Users\Amin\Documents\GitHub\Reversi-Done\obj\Debug\WindowsFormsApplication4.pdb
