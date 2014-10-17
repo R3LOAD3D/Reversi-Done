@@ -50,7 +50,7 @@ namespace WindowsFormsApplication4
                 {
                     if (MouseX + dx < 0 || MouseX + dx > numvak)
                         continue;
-                    for (int dy = -1; dy < 2; dy++)
+                    for (int dy = -1; dy < 2; dy++) 
                     {
                         if (MouseY + dy < 0 || MouseY + dy > numvak)
                             continue;
@@ -285,9 +285,15 @@ namespace WindowsFormsApplication4
         private void winner() // Winner-Box
         {
             if (teller1 > teller2)
+            {
                 textBox4.Text = "Rood wint!";
+                textBox4.BackColor = Color.Red;
+            }
             else if (teller1 < teller2)
+            {
                 textBox4.Text = "Blauw wint";
+                textBox4.BackColor = Color.Blue;
+            }
             else
                 textBox4.Text = "Gelijk";
         }

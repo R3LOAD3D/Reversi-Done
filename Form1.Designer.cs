@@ -109,6 +109,7 @@
             this.textBox3.TabIndex = 9;
             this.textBox3.Text = "Blauw";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox3.ReadOnly = true;
             // 
             // textBox4
             // 
@@ -120,6 +121,7 @@
             this.textBox4.Text = "Nog niet bekend!";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4.ReadOnly = true;
             // 
             // label1
             // 
