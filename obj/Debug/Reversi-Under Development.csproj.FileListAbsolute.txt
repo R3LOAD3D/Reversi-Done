@@ -10,3 +10,12 @@ C:\Users\Amin\Desktop\Reversi-Done-master\Reversi-Done-master\obj\Debug\WindowsF
 C:\Users\Amin\Documents\GitHub\Reversi-Done\bin\Debug\WindowsFormsApplication4.exe.config
 C:\Users\Amin\Documents\GitHub\Reversi-Done\obj\Debug\WindowsFormsApplication4.exe
 C:\Users\Amin\Documents\GitHub\Reversi-Done\obj\Debug\WindowsFormsApplication4.pdb
+C:\Users\Sebastiaan\Documents\Reversi-Done\bin\Debug\WindowsFormsApplication4.exe.config
+C:\Users\Sebastiaan\Documents\Reversi-Done\obj\Debug\WindowsFormsApplication4.exe
+C:\Users\Sebastiaan\Documents\Reversi-Done\obj\Debug\WindowsFormsApplication4.pdb
+C:\Users\Sebastiaan\Documents\Reversi-Done\bin\Debug\WindowsFormsApplication4.exe
+C:\Users\Sebastiaan\Documents\Reversi-Done\bin\Debug\WindowsFormsApplication4.pdb
+C:\Users\Sebastiaan\Documents\Reversi-Done\obj\Debug\Reversi-Under Development.csprojResolveAssemblyReference.cache
+C:\Users\Sebastiaan\Documents\Reversi-Done\obj\Debug\WindowsFormsApplication4.Form1.resources
+C:\Users\Sebastiaan\Documents\Reversi-Done\obj\Debug\WindowsFormsApplication4.Properties.Resources.resources
+C:\Users\Sebastiaan\Documents\Reversi-Done\obj\Debug\Reversi-Under Development.csproj.GenerateResource.Cache

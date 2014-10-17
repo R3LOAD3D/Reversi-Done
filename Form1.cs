@@ -18,9 +18,9 @@ namespace WindowsFormsApplication4
         int teller1;
         int teller2;
         int[,] tegels;
-        
-        
-        
+
+
+
         bool helpfunctie = false;
 
         public Form1()
@@ -28,14 +28,14 @@ namespace WindowsFormsApplication4
             InitializeComponent();
 
             //abonnementen op events
-            
+
             panel1.Paint += new PaintEventHandler(panel1_Paint);
             panel3.Paint += new PaintEventHandler(panel3_Paint);
             panel1.MouseClick += panel1_MouseClick;
             tegels = new int[numvak, numvak];
             tegels[numvak / 2, numvak / 2] = 1;
             tegels[numvak / 2, numvak / 2 - 1] = -1;
-            tegels[numvak / 2 - 1, numvak /2 - 1] = 1;
+            tegels[numvak / 2 - 1, numvak / 2 - 1] = 1;
             tegels[numvak / 2 - 1, numvak / 2] = -1;
             panel1.Size = new System.Drawing.Size(numvak * gridvaksize, numvak * gridvaksize);
 
@@ -46,7 +46,7 @@ namespace WindowsFormsApplication4
         {
             if (tegels[MouseX, MouseY] == 0)
             {
-                for (int dx = -1; dx < 2; dx++ )
+                for (int dx = -1; dx < 2; dx++)
                 {
                     if (MouseX + dx < 0 || MouseX + dx > numvak)
                         continue;
@@ -75,7 +75,7 @@ namespace WindowsFormsApplication4
                             }
 
                         }
-                        catch(Exception)
+                        catch (Exception)
                         {
 
 
@@ -84,7 +84,7 @@ namespace WindowsFormsApplication4
                     }
 
                 }
-                    
+
 
             }
             return false;
@@ -95,14 +95,14 @@ namespace WindowsFormsApplication4
             bool CanBlueMove = false;
             bool CanRedMove = false;
 
-            for(int xgrid = 0; xgrid < numvak; xgrid++)
+            for (int xgrid = 0; xgrid < numvak; xgrid++)
             {
-                for(int ygrid = 0; ygrid < numvak; ygrid++)
+                for (int ygrid = 0; ygrid < numvak; ygrid++)
                 {
                     if (ValidMove(xgrid, ygrid, 1))
-                           CanBlueMove = true;
+                        CanBlueMove = true;
                     if (ValidMove(xgrid, ygrid, -1))
-                           CanRedMove = true;
+                        CanRedMove = true;
                 }
 
             }
@@ -115,7 +115,7 @@ namespace WindowsFormsApplication4
 
             if (CanBlueMove && !CanRedMove)
                 speleraanzet = "Blauw";
-               
+
         }
         void panel1_MouseClick(object sender, MouseEventArgs e) // When the mouse has been clicked it will draw an ellipse based on who has the turn
         {
@@ -144,7 +144,7 @@ namespace WindowsFormsApplication4
                     speleraanzet = "Blauw";
                 }
             }
-            
+
 
             Label1_Teller();
             TextBox3_Speler();
@@ -154,9 +154,9 @@ namespace WindowsFormsApplication4
         private void ColourChanger(int PlayerColour, int GridX, int GridY) //Changes the colour of the encapsulated circles
         {
             int EnemyColour = -PlayerColour;
-            for(int dx = -1; dx < 2; dx++)
+            for (int dx = -1; dx < 2; dx++)
             {
-                for(int dy = -1; dy < 2; dy++)
+                for (int dy = -1; dy < 2; dy++)
                 {
                     int offset = 1;
                     try
@@ -178,18 +178,18 @@ namespace WindowsFormsApplication4
 
                         }
                     }
-                    catch(Exception)
+                    catch (Exception)
                     {
 
                     }
-                    
+
                 }
 
             }
 
 
         }
-      
+
 
         private void panel1_Paint(object obj, PaintEventArgs e) // Drawing of the grid
         {
@@ -197,7 +197,7 @@ namespace WindowsFormsApplication4
             DrawPen.Width = 3;
 
 
-            
+
             e.Graphics.FillEllipse(Brushes.Blue, numvak / 2 * gridvaksize, numvak / 2 * gridvaksize, gridvaksize, gridvaksize);
             e.Graphics.FillEllipse(Brushes.Blue, numvak / 2 * gridvaksize - gridvaksize, numvak / 2 * gridvaksize - gridvaksize, gridvaksize, gridvaksize);
             e.Graphics.FillEllipse(Brushes.Red, numvak / 2 * gridvaksize, numvak / 2 * gridvaksize - gridvaksize, gridvaksize, gridvaksize);
@@ -209,24 +209,24 @@ namespace WindowsFormsApplication4
 
             }
 
-            if(helpfunctie)
+            if (helpfunctie)
                 Helpfunctie(); ;
 
             for (int xgrid = 0; xgrid < numvak; xgrid++)
             {
-                for(int ygrid = 0; ygrid < numvak; ygrid++)
+                for (int ygrid = 0; ygrid < numvak; ygrid++)
                 {
-                    
-                    if(tegels[xgrid, ygrid] == 1)
+
+                    if (tegels[xgrid, ygrid] == 1)
                     {
                         e.Graphics.FillEllipse(Brushes.Blue, xgrid * gridvaksize, ygrid * gridvaksize, gridvaksize, gridvaksize); // Creates the blue ellipse
 
                     }
-                    if(tegels[xgrid, ygrid] == -1)
+                    if (tegels[xgrid, ygrid] == -1)
                     {
                         e.Graphics.FillEllipse(Brushes.Red, xgrid * gridvaksize, ygrid * gridvaksize, gridvaksize, gridvaksize); // Creates the red ellipse
                     }
-                    if(tegels[xgrid, ygrid] == 2)
+                    if (tegels[xgrid, ygrid] == 2)
                     {
                         e.Graphics.DrawEllipse(DrawPen, xgrid * gridvaksize + gridvaksize / 4, ygrid * gridvaksize + gridvaksize / 4, gridvaksize / 2, gridvaksize / 2); //Creates the ellipse for the help-function, but turns the value to 0, so it can be filled with other ellipses.
                         tegels[xgrid, ygrid] = 0;
@@ -262,7 +262,7 @@ namespace WindowsFormsApplication4
                 spelerkleur = -1;
             else
                 spelerkleur = 1;
-            for(int x = 0; x < numvak; x++)
+            for (int x = 0; x < numvak; x++)
             {
                 for (int y = 0; y < numvak; y++)
                 {
@@ -291,7 +291,7 @@ namespace WindowsFormsApplication4
             else
                 textBox4.Text = "Gelijk";
         }
-        
+
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
