@@ -12,12 +12,14 @@ namespace WindowsFormsApplication4
 {
     public partial class Form1 : Form
     {
-        int numvak = 8;
-        int gridvaksize = 60;
+        int numvak = 10;  // number of squares in the grid, both in x and y-direction
+        int gridvaksize = 60; //size of each gridsquare
         string speleraanzet = "Blauw";
         int teller1;
         int teller2;
         int[,] tegels;
+        
+        
         
         bool helpfunctie = false;
 
@@ -35,6 +37,7 @@ namespace WindowsFormsApplication4
             tegels[numvak / 2, numvak / 2 - 1] = -1;
             tegels[numvak / 2 - 1, numvak /2 - 1] = 1;
             tegels[numvak / 2 - 1, numvak / 2] = -1;
+            panel1.Size = new System.Drawing.Size(numvak * gridvaksize, numvak * gridvaksize);
 
         }
 
@@ -188,10 +191,11 @@ namespace WindowsFormsApplication4
         }
       
 
-        private void panel1_Paint(object obj, PaintEventArgs e) // tekenen van de Grid
+        private void panel1_Paint(object obj, PaintEventArgs e) // Drawing of the grid
         {
             Pen DrawPen = new Pen(Color.Black);
             DrawPen.Width = 3;
+
 
             
             e.Graphics.FillEllipse(Brushes.Blue, numvak / 2 * gridvaksize, numvak / 2 * gridvaksize, gridvaksize, gridvaksize);
@@ -281,9 +285,9 @@ namespace WindowsFormsApplication4
         private void winner() // Winner-Box
         {
             if (teller1 > teller2)
-                textBox4.Text = "Blauw wint!";
+                textBox4.Text = "Rood wint!";
             else if (teller1 < teller2)
-                textBox4.Text = "Rood wint";
+                textBox4.Text = "Blauw wint";
             else
                 textBox4.Text = "Gelijk";
         }
@@ -336,6 +340,11 @@ namespace WindowsFormsApplication4
             }
             label1.Text = teller1.ToString();
             label2.Text = teller2.ToString();
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
